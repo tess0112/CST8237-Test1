@@ -21,12 +21,12 @@ public class Goal : MonoBehaviour {
         {
             audioSource.Play();
             StartCoroutine(WaitForGoalSound());
-            SceneManager.LoadScene("MenuScene");
         }
     }
 
     IEnumerator WaitForGoalSound()
     {
-        yield return new WaitForSeconds(300000f);
+        yield return new WaitForSeconds(1.5f);
+        SceneManager.LoadScene("MenuScene");
     }
 }
